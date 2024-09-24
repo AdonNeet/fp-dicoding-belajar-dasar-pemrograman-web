@@ -16,7 +16,7 @@ h3 {
 footer {
   padding: 20px;
   color: white;
-  background-color: #00a2c6;
+  background-color: #407986;
   text-align: center;
   font-weight: bold;
 }
@@ -43,7 +43,7 @@ nav li {
 }
 
 nav {
-  background-color: #00a2c6;
+  background-color: #407986;
   padding: 5px;
   position: sticky;
   top: 0;
@@ -56,9 +56,17 @@ nav {
 .hero {
   font-size: 20px;
   padding: 30px;
-  background-color: #00c8eb;
   text-align: center;
   color: white;
+  background: linear-gradient(45deg, #c20017, #563fff, #ff8615);
+  background-size: 400% 300%;
+  animation: color 10s ease-in-out infinite;
+}
+
+@keyframes color {
+  0% {background-position: 0 50%;}
+  50% {background-position: 100% 50%;}
+  100% {background-position: 0 50%;}
 }
 
 .hero figure {
@@ -89,7 +97,6 @@ main {
 aside {
   flex: 1;
   height: 50%;
-  max-height: 57vh;
 }
 
 .scroll-up-btn {
@@ -124,6 +131,7 @@ header {
   display: block;
   margin-left: auto;
   margin-right: auto;
+  border-radius: 25px;
 }
 
 .author #contact {
@@ -162,10 +170,19 @@ header {
 }
 
 .featured-image {
-  width: 100%;
+  width: auto;
+  min-height: 8vh;
   max-height: 300px;
+  max-width: 80vw;
   object-fit: cover;
   object-position: center;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.wFull {
+  width: 100%;
 }
 
 table {
@@ -189,12 +206,6 @@ table tr:nth-child(even) {
   background-color: #f9f9f9;
 }
 
-@media screen and (max-height: 730px) {
-  aside {
-    max-height: 60vh;
-  }
-}
-
 @media screen and (max-width: 1200px) {
   main {
     flex-flow: column nowrap;
@@ -213,7 +224,7 @@ table tr:nth-child(even) {
   }
 }
 
-@media (max-width: 666px) {
+@media screen and (max-width: 666px) {
   .nav-menu {
     display: none;
     flex-direction: column;
